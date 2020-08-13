@@ -1,11 +1,11 @@
-# churn-prediction-with-apache-spark
+# Digital Services User Churn with Apache Spark
 
 ## Overview
 
 This repository contains the code required to deploy a Gradient Boosting (GBT) Machine Learning model to predict user churn in a digital music service. The project structure was created by Quantam black's, Kedro. Apache Spark was implemented to handle the large dataset and deploy analytics and ML at scale. The project was then deployed to AWS EMR service to leverage the infrastructure. The project followed the CRISP-DM principles.
 
 
-Model Overview:
+**Model Overview**:
 - Percentage predicted correct (%): 99.9
 - Churned users predicted (%): 99.5
 - f1 score from MulticlassClassificationEvaluator: [0: 0.750557583960012, 1: 0.7155496453152247]
