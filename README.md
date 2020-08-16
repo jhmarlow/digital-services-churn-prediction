@@ -13,9 +13,9 @@ This repository contains the code required to deploy a Gradient Boosting (GBT) M
 ## Quick Start
 
 ### Prerequisites
-Python 3.7.6
-PySpark 3.0.0
-Jupyter Notebooks
+- Python 3.7.6
+- PySpark 3.0.0
+- Jupyter Notebooks
 
 ### Project Structure
 The project contains four notebooks:
