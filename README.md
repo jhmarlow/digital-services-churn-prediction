@@ -12,6 +12,12 @@ This repository contains the code required to deploy a Gradient Boosting (GBT) M
 
 ## Quick Start
 
+### Prerequisites
+Python 3.7.6
+PySpark 3.0.0
+Jupyter Notebooks
+
+### Project Structure
 The project contains four notebooks:
 1. **Sparkify_EDA**: initial look at the data provided pulling out some stats and seeing data available.
 2. **Sparkify_DataWrangling**: cleaning any problems found from initial exploration
