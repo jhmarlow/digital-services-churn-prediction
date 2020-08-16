@@ -16,6 +16,7 @@ This repository contains the code required to deploy a Gradient Boosting (GBT) M
 - Python 3.7.6
 - PySpark 3.0.0
 - Jupyter Notebooks
+- Python packages see requirements.txt
 
 ### Project Structure
 The project contains four notebooks:
@@ -32,6 +33,12 @@ Kedro - The project structure was generated using `Kedro 0.16.2` (Quantam Black)
 Apache Spark - used for Big DataAnalytics
 
 ## Dataset
+Available from Udacity DataSceince Nanodegree Public AWS S3 Bucket.
+
+2 datasets:
+1. mini_sparkify_event_data.json - small dataset, used for initial analysis and visualistion (123MB)
+2. sparkify_event_data.json - larger dataset used to train ML model on AWS EMR (12GB)
+
 
 From Exploratory Data Analysis (EDA):
 - *location*: location of user, seems to append each new state (location, state)
