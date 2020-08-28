@@ -10,11 +10,15 @@ This repository contains the code required to deploy a Gradient Boosting (GBT) M
 - Churned users predicted (%): 99.5
 - f1 score from MulticlassClassificationEvaluator: [0: 0.750557583960012, 1: 0.7155496453152247]
 
+![features](/readme_images/features.png)
+
 ## Quick Start
 
 ### Prerequisites
 - Python 3.7.6
-- PySpark 3.0.0
+- PySpark Local 3.0.0
+- PySpark IBM  2.3.4
+- PySpark AWS 2.4.5
 - Jupyter Notebooks
 - Python packages see requirements.txt
 
@@ -38,6 +42,10 @@ Available from Udacity DataSceince Nanodegree Public AWS S3 Bucket.
 2 datasets:
 1. mini_sparkify_event_data.json - small dataset, used for initial analysis and visualistion (123MB)
 2. sparkify_event_data.json - larger dataset used to train ML model on AWS EMR (12GB)
+
+![eda1](/readme_images/user_subscriptions.png)
+
+![eda2](/readme_images/event_subscriptions.png)
 
 
 From Exploratory Data Analysis (EDA):
@@ -73,12 +81,14 @@ Logistic Regression, RandomForestClassifier and GBT models were evaluated. Then 
 - Negative user interactions
 - Service Error events
 
+![features](/readme_images/sns_plot.png)
 
-## Todo:
-- Deploy to Kedro pipeline
+## Issues:
+- IBM watson notebook timeout and fail to connect to kernel
+- AWS EMR keyerror when using GBT model see stack similar stackoverflow question [here](https://stackoverflow.com/questions/58910023/keyerror-when-training-a-model-with-pyspark-ml-on-aws-emr-with-data-from-s3-buck_).
 
 ## References
-Project completed as part of Udacity DataScience Nanodegree. 
+Project completed as part of Udacity DataScience Nanodegree.
 Data provided is from fictional Digital Music Service provider "Sparkify"
 
 
