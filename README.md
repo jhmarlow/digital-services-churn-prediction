@@ -1,19 +1,11 @@
-# Digital Services User Churn with Apache Spark
+# Digital Services User Churn Prediction with Apache Spark
 
 ## Overview
-
-This repository contains the code required to deploy a Gradient Boosting (GBT) Machine Learning model to predict user churn in a digital music service. The project structure was created by Quantam black's, Kedro. Apache Spark was implemented to handle the large dataset and deploy analytics and ML at scale. The project was then deployed to AWS EMR service to leverage the infrastructure. The project followed the CRISP-DM principles.
-
-
-**Model Overview**:
-- Percentage predicted correct (%): 99.9
-- Churned users predicted (%): 99.5
-- f1 score from MulticlassClassificationEvaluator: [0: 0.750557583960012, 1: 0.7155496453152247]
+This repository contains the code used to build Machine Learning model to predict user churn in a digital music service. Apache Spark (PySpark) was implemented to handle the large dataset and deploy analytics and ML at scale. The project was then deployed was developed in IBM Watson distributed computing platform. The project followed the CRISP-DM principles.
 
 ![features](/readme_images/features.png)
 
 ## Quick Start
-
 ### Prerequisites
 - Python 3.7.6
 - PySpark Local 3.0.0
@@ -33,15 +25,18 @@ The project contains four notebooks:
 ## Tools:
 IBM Watson - used to host development of code
 AWS EMR - used to deploy code
-Kedro - The project structure was generated using `Kedro 0.16.2` (Quantam Black)
 Apache Spark - used for Big DataAnalytics
+
+## Introduction
+The digital music service industry is a highly competitive sector, with the likes of Spotify, Apple Music, Pandora, TIDAL and more, all competing in a market where it's difficult to get an edge. To make the digital subscription model work it is vital to retain a strong customer base. However, due to the nature of a digital music subscription model, customers changing services is inevitable, and this is where customer churn comes in. In this project an optimised machine learning algorithm was developed to predict user churn.
 
 ## Dataset
 Available from Udacity DataSceince Nanodegree Public AWS S3 Bucket.
 
 2 datasets:
 1. mini_sparkify_event_data.json - small dataset, used for initial analysis and visualistion (123MB)
-2. sparkify_event_data.json - larger dataset used to train ML model on AWS EMR (12GB)
+2. medium-sparkify-event-data.json - medium size dataset to run on IBM watson
+3. sparkify_event_data.json - larger dataset used to train ML model on AWS EMR (12GB)
 
 ![eda1](/readme_images/user_subscriptions.png)
 
