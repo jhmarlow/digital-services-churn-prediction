@@ -13,12 +13,10 @@ This repository contains the code used to build Machine Learning model to predic
 - Python packages see requirements.txt
 
 ### Project Structure
-The project contains four notebooks:
-1. **Sparkify_EDA**: initial look at the data provided pulling out some stats and seeing data available.
-2. **Sparkify_DataWrangling**: cleaning any problems found from initial exploration
-3. **Sparkify_FeatureEngineering**: used to create features to be used in ML model
-4. **Sparkify_MachineLearning**: used to evaluate and optimise ML models
-5. **Sparkify_deploy**: deployable notebook to AWS EMR foor Big Data Analytics and ML
+The project contains 3 directories:
+1. **deployment**: contains notebooks used for deployment (local, IBM, AWS)
+2. **development**: code used to develop deployment notebooks
+3. **data_visualisation**: code used to create data visualisations
 
 ## Tools:
 IBM Watson - used to host development of code
@@ -64,7 +62,6 @@ From Exploratory Data Analysis (EDA):
 ## Machine Learning
 Logistic Regression, RandomForestClassifier and GBT models were evaluated. Then cross validation was used to tune the hyperparameters of the GBT model to achieve the best performance. Features where developed to replicate user behaviour.
 
-
 **Features**:
 - Gender
 - Location
@@ -75,6 +72,11 @@ Logistic Regression, RandomForestClassifier and GBT models were evaluated. Then 
 - Service Error events
 
 ![features](/readme_images/sns_plot.png)
+
+
+## Results 
+The Gradient Boosting model was een to perform the best when predicting user churn on the sparkify dataset. It can be seen that 85% of churned users can be predicted to churn with a 4% error rate. Area Under the Curce (AUC) was used as the primary metric for the binary classification problem to indicate the models abiity to distinguish between the two classes, with score of 0.605.
+
 
 ## Issues:
 - IBM watson notebook timeout and fail to connect to kernel
