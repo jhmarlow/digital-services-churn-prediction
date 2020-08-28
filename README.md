@@ -3,8 +3,6 @@
 ## Overview
 This repository contains the code used to build Machine Learning model to predict user churn in a digital music service. Apache Spark (PySpark) was implemented to handle the large dataset and deploy analytics and ML at scale. The project was then deployed was developed in IBM Watson distributed computing platform. The project followed the CRISP-DM principles.
 
-![features](/readme_images/features.png)
-
 ## Quick Start
 ### Prerequisites
 - Python 3.7.6
@@ -38,9 +36,9 @@ Available from Udacity DataSceince Nanodegree Public AWS S3 Bucket.
 2. medium-sparkify-event-data.json - medium size dataset to run on IBM watson
 3. sparkify_event_data.json - larger dataset used to train ML model on AWS EMR (12GB)
 
-![eda1](/readme_images/user_subscriptions.png)
+![user subscription](/readme_images/user_subscription.png)
 
-![eda2](/readme_images/event_subscriptions.png)
+![event subscription](/readme_images/event_subscriptions.png)
 
 
 From Exploratory Data Analysis (EDA):
