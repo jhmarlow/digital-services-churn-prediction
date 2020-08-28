@@ -1,5 +1,8 @@
 # Digital Services User Churn Prediction with Apache Spark
 
+For the full report please view: 
+https://medium.com/@jacobmarlow/using-apache-spark-to-predict-user-churn-in-the-digital-music-service-industry-2efe974547c5?source=friends_link&sk=dd2e14cafe268b5e9a81d655e365b34f
+
 ## Overview
 This repository contains the code used to build Machine Learning model to predict user churn in a digital music service. Apache Spark (PySpark) was implemented to handle the large dataset and deploy analytics and ML at scale. The project was then deployed was developed in IBM Watson distributed computing platform. The project followed the CRISP-DM principles.
 
