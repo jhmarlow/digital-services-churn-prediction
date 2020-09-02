@@ -1,10 +1,9 @@
 # Digital Services User Churn Prediction with Apache Spark
 
-For the full report please view: 
-https://medium.com/@jacobmarlow/using-apache-spark-to-predict-user-churn-in-the-digital-music-service-industry-2efe974547c5?source=friends_link&sk=dd2e14cafe268b5e9a81d655e365b34f
+[Medium Article](https://medium.com/@jacobmarlow/using-apache-spark-to-predict-user-churn-in-the-digital-music-service-industry-2efe974547c5?source=friends_link&sk=dd2e14cafe268b5e9a81d655e365b34f)
 
 ## Overview
-This repository contains the code used to build Machine Learning model to predict user churn in a digital music service. Apache Spark (PySpark) was implemented to handle the large dataset and deploy analytics and ML at scale. The project was then deployed was developed in IBM Watson distributed computing platform. The project followed the CRISP-DM principles.
+This repository contains the code used to build a machine learning model to predict user churn in a digital music service. Apache Spark (PySpark) was implemented to handle the feature engineering on a large dataset and deploy ML at scale. The project was developed locally, in IBM Watson and on a AWS EMR cluster. The project followed the CRISP-DM principles.
 
 ## Quick Start
 ### Prerequisites
@@ -13,18 +12,18 @@ This repository contains the code used to build Machine Learning model to predic
 - PySpark IBM  2.3.4
 - PySpark AWS 2.4.5
 - Jupyter Notebooks
-- Python packages see requirements.txt
+- For Python packages see requirements.txt
 
 ### Project Structure
 The project contains 3 directories:
-1. **deployment**: contains notebooks used for deployment (local, IBM, AWS)
+1. **deployments**: contains notebooks used for deployment (local, IBM, AWS)
 2. **development**: code used to develop deployment notebooks
-3. **data_visualisation**: code used to create data visualisations
+3. **visualisations**: code used to create data visualisations
 
 ## Tools:
 IBM Watson - used to host development of code
 AWS EMR - used to deploy code
-Apache Spark - used for Big DataAnalytics
+Apache Spark - used for big data analytics
 
 ## Introduction
 The digital music service industry is a highly competitive sector, with the likes of Spotify, Apple Music, Pandora, TIDAL and more, all competing in a market where it's difficult to get an edge. To make the digital subscription model work it is vital to retain a strong customer base. However, due to the nature of a digital music subscription model, customers changing services is inevitable, and this is where customer churn comes in. In this project an optimised machine learning algorithm was developed to predict user churn.
@@ -78,8 +77,13 @@ Logistic Regression, RandomForestClassifier and GBT models were evaluated. Then 
 
 
 ## Results 
-The Gradient Boosting model was een to perform the best when predicting user churn on the sparkify dataset. It can be seen that 85% of churned users can be predicted to churn with a 4% error rate. Area Under the Curce (AUC) was used as the primary metric for the binary classification problem to indicate the models abiity to distinguish between the two classes, with score of 0.605.
 
+- Logistic regression: 55.6%
+- RFC: 55.6%
+- GBT: 60.5%
+
+AUC was chosen as the most appropriate metric for this binary classification problem, because of the two key metrics of True Positive Rate (TPR) and False Positive Rate (FPR), which AUC allows us to quantify.
+After reviewing the models it can be seen, that for our metric, the Gradient Boosting model is the best performing, with an AUC score of 60.5% indicating GBT performs the best in being able to distinguish between the two classes. The model is able to predict 85% of churned users, with only a 4% error rate. We can also look at feature importance using GBT models featureImportances method. We can see that the most important feature is `num_bad_recc` which relates to bad interactions with the service such as thumbs downs.
 
 ## Issues:
 - IBM watson notebook timeout and fail to connect to kernel
